@@ -59,12 +59,9 @@ def main():
 
     soup = BeautifulSoup(res.text, "html.parser")
 
-    with open("pages.json","a") as f:
-
-        data = json.dumps(crawl(start_url,5,soup))
+    with open("pages.json", "a") as f:
+        data = json.dumps(crawl(start_url, 5, soup))
         f.write(data)
-
-
 
 
 if __name__ == "__main__":
